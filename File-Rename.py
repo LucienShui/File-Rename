@@ -1,8 +1,5 @@
 import os
-print('Input the substring of file name you want to replace:')
-old = input()
-print('You want this string be replaced to:')
-new = input()
+old = input('输入被替换的文件名:')
+new = input('这个文件名会被替换为:')
 for file in os.listdir('.'):
-    if file[-2: ] == 'py': continue
-    os.rename(file, file.replace(old, new))
+    if file[-2: ] != 'py': os.rename(file, file.replace(old, new))
